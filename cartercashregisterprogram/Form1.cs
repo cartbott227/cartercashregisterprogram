@@ -34,7 +34,7 @@ namespace cartercashregisterprogram
         }
 
         private void totalButton_Click(object sender, EventArgs e)
-        {
+        { 
             burgercost = Convert.ToInt16(burgertextBox.Text);
             friescost = Convert.ToInt16(friestextBox.Text);
             sodacost = Convert.ToInt16(sodatextBox.Text);
