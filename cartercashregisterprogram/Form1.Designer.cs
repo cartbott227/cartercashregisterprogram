@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mcdonaldsForm));
             this.burgertextBox = new System.Windows.Forms.TextBox();
             this.friestextBox = new System.Windows.Forms.TextBox();
@@ -45,6 +46,18 @@
             this.sodaCost = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.costLabel = new System.Windows.Forms.Label();
+            this.subtotalLabel = new System.Windows.Forms.Label();
+            this.payButton = new System.Windows.Forms.Button();
+            this.payBox = new System.Windows.Forms.TextBox();
+            this.taxLabel = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
+            this.changeLabel = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.subtotalCalc = new System.Windows.Forms.Label();
+            this.taxCalc = new System.Windows.Forms.Label();
+            this.totalCalc = new System.Windows.Forms.Label();
+            this.changeCalc = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // burgertextBox
@@ -216,12 +229,126 @@
             this.costLabel.TabIndex = 15;
             this.costLabel.Text = "Cost";
             // 
+            // subtotalLabel
+            // 
+            this.subtotalLabel.AutoSize = true;
+            this.subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.subtotalLabel.Location = new System.Drawing.Point(12, 196);
+            this.subtotalLabel.Name = "subtotalLabel";
+            this.subtotalLabel.Size = new System.Drawing.Size(79, 16);
+            this.subtotalLabel.TabIndex = 16;
+            this.subtotalLabel.Text = "Sub Total:";
+            // 
+            // payButton
+            // 
+            this.payButton.Location = new System.Drawing.Point(23, 266);
+            this.payButton.Name = "payButton";
+            this.payButton.Size = new System.Drawing.Size(52, 22);
+            this.payButton.TabIndex = 18;
+            this.payButton.Text = "Pay ";
+            this.payButton.UseVisualStyleBackColor = true;
+            // 
+            // payBox
+            // 
+            this.payBox.Location = new System.Drawing.Point(88, 266);
+            this.payBox.Name = "payBox";
+            this.payBox.Size = new System.Drawing.Size(35, 20);
+            this.payBox.TabIndex = 19;
+            // 
+            // taxLabel
+            // 
+            this.taxLabel.AutoSize = true;
+            this.taxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.taxLabel.Location = new System.Drawing.Point(53, 221);
+            this.taxLabel.Name = "taxLabel";
+            this.taxLabel.Size = new System.Drawing.Size(38, 16);
+            this.taxLabel.TabIndex = 20;
+            this.taxLabel.Text = "Tax:";
+            // 
+            // totalLabel
+            // 
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.totalLabel.Location = new System.Drawing.Point(43, 247);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(48, 16);
+            this.totalLabel.TabIndex = 21;
+            this.totalLabel.Text = "Total:";
+            // 
+            // changeLabel
+            // 
+            this.changeLabel.AutoSize = true;
+            this.changeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.changeLabel.Location = new System.Drawing.Point(26, 291);
+            this.changeLabel.Name = "changeLabel";
+            this.changeLabel.Size = new System.Drawing.Size(65, 16);
+            this.changeLabel.TabIndex = 22;
+            this.changeLabel.Text = "Change:";
+            // 
+            // subtotalCalc
+            // 
+            this.subtotalCalc.AutoSize = true;
+            this.subtotalCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalCalc.ForeColor = System.Drawing.Color.White;
+            this.subtotalCalc.Location = new System.Drawing.Point(98, 196);
+            this.subtotalCalc.Name = "subtotalCalc";
+            this.subtotalCalc.Size = new System.Drawing.Size(45, 16);
+            this.subtotalCalc.TabIndex = 23;
+            this.subtotalCalc.Text = "label2";
+            // 
+            // taxCalc
+            // 
+            this.taxCalc.AutoSize = true;
+            this.taxCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taxCalc.ForeColor = System.Drawing.Color.White;
+            this.taxCalc.Location = new System.Drawing.Point(98, 221);
+            this.taxCalc.Name = "taxCalc";
+            this.taxCalc.Size = new System.Drawing.Size(45, 16);
+            this.taxCalc.TabIndex = 24;
+            this.taxCalc.Text = "label3";
+            // 
+            // totalCalc
+            // 
+            this.totalCalc.AutoSize = true;
+            this.totalCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCalc.ForeColor = System.Drawing.Color.White;
+            this.totalCalc.Location = new System.Drawing.Point(98, 247);
+            this.totalCalc.Name = "totalCalc";
+            this.totalCalc.Size = new System.Drawing.Size(45, 16);
+            this.totalCalc.TabIndex = 25;
+            this.totalCalc.Text = "label4";
+            // 
+            // changeCalc
+            // 
+            this.changeCalc.AutoSize = true;
+            this.changeCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeCalc.ForeColor = System.Drawing.Color.White;
+            this.changeCalc.Location = new System.Drawing.Point(98, 293);
+            this.changeCalc.Name = "changeCalc";
+            this.changeCalc.Size = new System.Drawing.Size(45, 16);
+            this.changeCalc.TabIndex = 26;
+            this.changeCalc.Text = "label5";
+            // 
             // mcdonaldsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(361, 361);
+            this.ClientSize = new System.Drawing.Size(598, 361);
+            this.Controls.Add(this.changeCalc);
+            this.Controls.Add(this.totalCalc);
+            this.Controls.Add(this.taxCalc);
+            this.Controls.Add(this.subtotalCalc);
+            this.Controls.Add(this.changeLabel);
+            this.Controls.Add(this.totalLabel);
+            this.Controls.Add(this.taxLabel);
+            this.Controls.Add(this.payBox);
+            this.Controls.Add(this.payButton);
+            this.Controls.Add(this.subtotalLabel);
             this.Controls.Add(this.costLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sodaCost);
@@ -241,6 +368,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "mcdonaldsForm";
             this.Text = "McDonald\'s";
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,6 +392,17 @@
         private System.Windows.Forms.Label sodaCost;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label costLabel;
+        private System.Windows.Forms.Label subtotalLabel;
+        private System.Windows.Forms.Button payButton;
+        private System.Windows.Forms.TextBox payBox;
+        private System.Windows.Forms.Label taxLabel;
+        private System.Windows.Forms.Label totalLabel;
+        private System.Windows.Forms.Label changeLabel;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.Label subtotalCalc;
+        private System.Windows.Forms.Label taxCalc;
+        private System.Windows.Forms.Label totalCalc;
+        private System.Windows.Forms.Label changeCalc;
     }
 }
 
