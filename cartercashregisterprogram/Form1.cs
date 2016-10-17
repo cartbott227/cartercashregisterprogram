@@ -29,7 +29,7 @@ namespace cartercashregisterprogram
         int icecreamcost;
         double taxAmount;
         double subtotal;
-        
+         
         public mcdonaldsForm()
         {
             InitializeComponent();
