@@ -57,6 +57,8 @@
             this.taxCalc = new System.Windows.Forms.Label();
             this.totalCalc = new System.Windows.Forms.Label();
             this.changeCalc = new System.Windows.Forms.Label();
+            this.receiptButton = new System.Windows.Forms.Button();
+            this.neworderButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,9 +140,9 @@
             // 
             // totalButton
             // 
-            this.totalButton.Location = new System.Drawing.Point(9, 171);
+            this.totalButton.Location = new System.Drawing.Point(1, 171);
             this.totalButton.Name = "totalButton";
-            this.totalButton.Size = new System.Drawing.Size(94, 22);
+            this.totalButton.Size = new System.Drawing.Size(90, 22);
             this.totalButton.TabIndex = 8;
             this.totalButton.Text = "Calculate Total";
             this.totalButton.UseVisualStyleBackColor = true;
@@ -248,6 +250,7 @@
             this.payButton.TabIndex = 18;
             this.payButton.Text = "Pay ";
             this.payButton.UseVisualStyleBackColor = true;
+            this.payButton.Click += new System.EventHandler(this.payButton_Click);
             // 
             // payBox
             // 
@@ -333,12 +336,34 @@
             this.changeCalc.TabIndex = 26;
             this.changeCalc.Text = "label5";
             // 
+            // receiptButton
+            // 
+            this.receiptButton.Location = new System.Drawing.Point(9, 315);
+            this.receiptButton.Name = "receiptButton";
+            this.receiptButton.Size = new System.Drawing.Size(82, 24);
+            this.receiptButton.TabIndex = 27;
+            this.receiptButton.Text = "Print Receipt";
+            this.receiptButton.UseVisualStyleBackColor = true;
+            this.receiptButton.Click += new System.EventHandler(this.receiptButton_Click);
+            // 
+            // neworderButton
+            // 
+            this.neworderButton.Location = new System.Drawing.Point(9, 345);
+            this.neworderButton.Name = "neworderButton";
+            this.neworderButton.Size = new System.Drawing.Size(82, 23);
+            this.neworderButton.TabIndex = 28;
+            this.neworderButton.Text = "New Order";
+            this.neworderButton.UseVisualStyleBackColor = true;
+            this.neworderButton.Click += new System.EventHandler(this.neworderButton_Click);
+            // 
             // mcdonaldsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Maroon;
-            this.ClientSize = new System.Drawing.Size(598, 361);
+            this.ClientSize = new System.Drawing.Size(598, 378);
+            this.Controls.Add(this.neworderButton);
+            this.Controls.Add(this.receiptButton);
             this.Controls.Add(this.changeCalc);
             this.Controls.Add(this.totalCalc);
             this.Controls.Add(this.taxCalc);
@@ -403,6 +428,8 @@
         private System.Windows.Forms.Label taxCalc;
         private System.Windows.Forms.Label totalCalc;
         private System.Windows.Forms.Label changeCalc;
+        private System.Windows.Forms.Button receiptButton;
+        private System.Windows.Forms.Button neworderButton;
     }
 }
 
