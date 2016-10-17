@@ -242,7 +242,7 @@
             // 
             // payButton
             // 
-            this.payButton.Location = new System.Drawing.Point(23, 266);
+            this.payButton.Location = new System.Drawing.Point(39, 266);
             this.payButton.Name = "payButton";
             this.payButton.Size = new System.Drawing.Size(52, 22);
             this.payButton.TabIndex = 18;
@@ -251,7 +251,7 @@
             // 
             // payBox
             // 
-            this.payBox.Location = new System.Drawing.Point(88, 266);
+            this.payBox.Location = new System.Drawing.Point(101, 266);
             this.payBox.Name = "payBox";
             this.payBox.Size = new System.Drawing.Size(35, 20);
             this.payBox.TabIndex = 19;

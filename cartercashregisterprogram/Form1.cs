@@ -28,7 +28,7 @@ namespace cartercashregisterprogram
         int sodacost;
         int icecreamcost;
         double taxAmount;
-
+        double subtotal;
         
         public mcdonaldsForm()
         {
@@ -45,16 +45,21 @@ namespace cartercashregisterprogram
             friescost = Convert.ToInt16(friestextBox.Text);
             sodacost = Convert.ToInt16(sodatextBox.Text);
             icecreamcost = Convert.ToInt16(icecreamtextBox.Text);
-            totalcost = BURGER * burgercost + FRIES * friescost + SODA * sodacost + icecreamcost * ICECREAM;
-      
-            taxAmount = totalcost * TAX - totalcost;
 
-            subtotalCalc.Text = totalcost.ToString("C");
+            subtotal = BURGER * burgercost + FRIES * friescost + SODA * sodacost + icecreamcost * ICECREAM;
+
+            taxAmount = subtotal * TAX - subtotal;
+
+            totalcost = subtotal + taxAmount;
+
+            subtotalCalc.Text = subtotal.ToString("C");
             subtotalCalc.Visible = true;
 
-            taxCalc.Text = totalcost.ToString("C");
+            taxCalc.Text = taxAmount.ToString("C");
             taxCalc.Visible = true;
 
+            totalCalc.Text = totalcost.ToString("C");
+            totalCalc.Visible = true;
 
             SoundPlayer cashPlayer = new SoundPlayer(Properties.Resources.chaching);
             cashPlayer.Play();
