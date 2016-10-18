@@ -72,9 +72,9 @@ namespace cartercashregisterprogram.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Dot_Matrix_Printer_SoundBible_com_790333844 {
+        internal static System.IO.UnmanagedMemoryStream receiptprint {
             get {
-                return ResourceManager.GetStream("Dot_Matrix_Printer_SoundBible_com_790333844", resourceCulture);
+                return ResourceManager.GetStream("receiptprint", resourceCulture);
             }
         }
     }

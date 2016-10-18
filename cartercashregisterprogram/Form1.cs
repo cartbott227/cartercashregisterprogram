@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Media;
 
@@ -33,7 +33,9 @@ namespace cartercashregisterprogram
         double change;
         double taxAmount;
         double subtotal;
-         
+
+        Graphics fg;  //Creates a global graphics object
+
         public mcdonaldsForm()
         {
             InitializeComponent();
@@ -42,6 +44,8 @@ namespace cartercashregisterprogram
             taxCalc.Visible = false;
             totalCalc.Visible = false;
             changeCalc.Visible = false;
+
+            fg = this.CreateGraphics();
         }
 
         private void totalButton_Click(object sender, EventArgs e)
@@ -66,7 +70,6 @@ namespace cartercashregisterprogram
 
             totalCalc.Text = totalcost.ToString("C");   //Converts the calculation to a string (int to string)
             totalCalc.Visible = true;                   //and makes the label visible
-
         }
 
         private void payButton_Click(object sender, EventArgs e)
@@ -79,34 +82,43 @@ namespace cartercashregisterprogram
                 changeCalc.Text = ("Insufficient tender.");
                 changeCalc.Visible = true;
             }
-            else
+            else //Outputs change amount to change label and plays a sound
             {
                 changeCalc.Text = change.ToString("C");
                 changeCalc.Visible = true;
 
-                SoundPlayer cashPlayer = new SoundPlayer(Properties.Resources.chaching); //Creates a player to store the sound and
+                SoundPlayer cashPlayer = new SoundPlayer(Properties.Resources.chaching); //Creates a player to store the cash register sound and
                 cashPlayer.Play();                                                       //and plays the sound
             }
         }
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
-            //prints receipt
+            SoundPlayer receiptPlayer = new SoundPlayer(Properties.Resources.receiptprint); //Creates a player to store the receipt printing sound
+            receiptPlayer.Play();                                                           //and plays the sound
+            Thread.Sleep(1000);
+            receiptPlayer.Play();
+
+            Pen receiptPen = new Pen(Color.White, 10);
+
+            fg.DrawRectangle(receiptPen, 30, 30, 0, 0);
+
+            //unfinshed
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
         {
-            subtotalCalc.Visible = false;
+            subtotalCalc.Visible = false;   //Makes the calculation labels invisble
             taxCalc.Visible = false;
             totalCalc.Visible = false;
             changeCalc.Visible = false;
 
-            subtotalCalc.Text = "";
+            subtotalCalc.Text = ""; //Clears the calculation labels
             taxCalc.Text = "";
             totalCalc.Text = "";
             changeCalc.Text = "";
 
-            burgertextBox.Text = "";
+            burgertextBox.Text = "";    //Clear the menu text boxes
             friestextBox.Text = "";
             sodatextBox.Text = "";
             icecreamtextBox.Text = "";

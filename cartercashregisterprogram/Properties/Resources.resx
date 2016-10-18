@@ -121,7 +121,7 @@
   <data name="chaching" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Cash Register Cha Ching-SoundBible.com-184076484.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Dot_Matrix_Printer_SoundBible_com_790333844" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="receiptprint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dot Matrix Printer-SoundBible.com-790333844.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
