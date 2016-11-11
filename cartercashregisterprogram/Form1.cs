@@ -101,7 +101,7 @@ namespace cartercashregisterprogram
 
             SolidBrush receiptBrush = new SolidBrush(Color.White);
 
-            fg.FillRectangle(receiptBrush, 300, 0, 5000, 5000); 
+            fg.FillRectangle(receiptBrush, 300, 0, 5000, 5000);   
             
             //unfinshed
         }
