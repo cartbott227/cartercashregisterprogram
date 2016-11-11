@@ -77,5 +77,16 @@ namespace cartercashregisterprogram.Properties {
                 return ResourceManager.GetStream("receiptprint", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallpapers_beach_images_urban_various_pixel_sailboat_white_sailboats_ocean_large_blue {
+            get {
+                object obj = ResourceManager.GetObject("wallpapers_beach_images_urban_various_pixel_sailboat_white_sailboats_ocean_large_" +
+                        "blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -94,15 +94,15 @@ namespace cartercashregisterprogram
 
         private void receiptButton_Click(object sender, EventArgs e)
         {
-            SoundPlayer receiptPlayer = new SoundPlayer(Properties.Resources.receiptprint); //Creates a player to store the receipt printing sound
-            receiptPlayer.Play();                                                           //and plays the sound
-            Thread.Sleep(1000);
-            receiptPlayer.Play();
+           // SoundPlayer receiptPlayer = new SoundPlayer(Properties.Resources.receiptprint); //Creates a player to store the receipt printing sound
+            //receiptPlayer.Play();                                                           //and plays the sound
+           // Thread.Sleep(1000);
+          ////  receiptPlayer.Play();
 
-            Pen receiptPen = new Pen(Color.White, 10);
+            SolidBrush receiptBrush = new SolidBrush(Color.White);
 
-            fg.DrawRectangle(receiptPen, 30, 30, 0, 0);
-
+            fg.FillRectangle(receiptBrush, 300, 0, 5000, 5000); 
+            
             //unfinshed
         }
 

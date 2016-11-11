@@ -86,6 +86,9 @@
   <ItemGroup>
     <None Include="Resources\Dot Matrix Printer-SoundBible.com-790333844.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallpapers-beach-images-urban-various-pixel-sailboat-white-sailboats-ocean-large-blue.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
